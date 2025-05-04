@@ -1,6 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://creator-dashboard-6bdp.onrender.com/api/:path*"
+    }
+  ]
+}

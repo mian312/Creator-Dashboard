@@ -7,7 +7,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default ({ mode }) => {
   // Load environment variables based on the current mode
   const env = loadEnv(mode, process.cwd(), '');
-  console.log('Environment variables:', env);
 
   return defineConfig({
     plugins: [
