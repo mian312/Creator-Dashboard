@@ -14,7 +14,7 @@ export default ({ mode }) => {
       tailwindcss()
     ],
     define: {
-      __APP_ENV__: JSON.stringify(env.VITE_VERCEL_ENV),
+      __APP_ENV__: process.env.VITE_VERCEL_ENV,
     },
     server: {
       proxy: {
