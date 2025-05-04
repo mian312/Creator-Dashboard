@@ -32,7 +32,7 @@ A modern web application built with React and Vite that allows content creators 
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/creator-dashboard.git
+   git clone https://github.com/mian312/creator-dashboard.git
    cd creator-dashboard
    ```
 
@@ -44,6 +44,9 @@ A modern web application built with React and Vite that allows content creators 
 3. Create a `.env` file in the root directory with the following variables:
    ```
    VITE_API_URL=your_api_url_here
+   ```
+   ```
+   NOTE: Before deployment make sure to check vercel.json for API rewrites.
    ```
 
 4. Start the development server
@@ -105,7 +108,4 @@ To deploy the application:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 

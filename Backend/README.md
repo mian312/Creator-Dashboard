@@ -125,10 +125,6 @@ creator-dashboard-backend/
 └── README.md
 ```
 
-## License
-
-ISC
-
 ## Author
 
 Milan Dey
