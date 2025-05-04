@@ -37,6 +37,19 @@ const PostCard = ({ post, onShare, isSavedScreen }) => {
   };
 
   const handleShare = () => {
+    // Add copy link functionality
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(post.postUrl)
+        .then(() => {
+          setShared(true);
+          // Call the onShare callback to claim reward
+          onShare();
+          setTimeout(() => {
+            setShared(false);
+          }, 3000);
+        })
+        .catch(err => console.error('Failed to copy link: ', err));
+    }
     setShowShareOptions(true);
   };
 
