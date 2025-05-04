@@ -25,7 +25,7 @@ const ReportsTable = () => {
     // Sort reports by timestamp in descending order (latest first)
     const sorted = [...data].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     setSortedReports(sorted);
-    
+
     // Update the Redux store with the new reports
     dispatch({ type: 'admin/fetchReports/fulfilled', payload: data });
   };
@@ -47,6 +47,16 @@ const ReportsTable = () => {
       report.post.postUrl.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
+
+  const truncateUrl = (url, maxLength = 30) => {
+    if (!url) {
+      return '';
+    }
+    if (url.length <= maxLength) {
+      return url;
+    }
+    return url.substring(0, maxLength) + '...';
+  };
 
   return (
     <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -80,7 +90,11 @@ const ReportsTable = () => {
           {filteredReports.map((report) => (
             <tr key={report._id}>
               <td className="border px-4 py-2">{report.reporter?.username || 'Deleted User'}</td>
-              <td className="border px-4 py-2">{report.post.postUrl}</td>
+              <td className="border px-4 py-2">
+                <a href={report.post.postUrl} className='text-blue-400' target="_blank" rel="noopener noreferrer">
+                  {truncateUrl(report.post.postUrl, 30)}
+                </a>
+              </td>
               <td className="border px-4 py-2">{formatDate(report.timestamp)}</td>
             </tr>
           ))}

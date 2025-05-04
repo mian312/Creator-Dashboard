@@ -50,6 +50,13 @@ JWT_SECRET=your_jwt_secret_key
 ADMIN_KEY=your_admin_secret_key
 REDIS_HOST=localhost
 REDIS_PORT=6379
+
+TWITTER_BEARER_TOKEN=your_twitter_bearer_token
+REDDIT_CLIENT_ID=your_reddit_client_id
+REDDIT_CLIENT_SECRET=your_reddit_client_secret
+REDDIT_USERNAME=your_reddit_username
+REDDIT_PASSWORD=your_reddit_password
+USER_AGENT=your_user_agent
 ```
 
 4. Start the server

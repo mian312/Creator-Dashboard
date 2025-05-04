@@ -157,12 +157,6 @@ const Login = () => {
                   Remember me
                 </label>
               </div>
-              
-              <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500 transition-colors">
-                  Forgot password?
-                </a>
-              </div>
             </div>
             
             {/* Login Button with loading state */}
@@ -184,50 +178,6 @@ const Login = () => {
               )}
             </button>
           </form>
-          
-          {/* Social Login with improved styling */}
-          <div className="mt-8">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200"></div>
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-3 bg-white text-gray-500">Or continue with</span>
-              </div>
-            </div>
-
-            <div className="mt-6 grid grid-cols-3 gap-3">
-              {/* Google */}
-              <button
-                type="button"
-                className="w-full inline-flex justify-center py-3 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 transition-all duration-300"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032 s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2 C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z" />
-                </svg>
-              </button>
-
-              {/* Facebook */}
-              <button
-                type="button"
-                className="w-full inline-flex justify-center py-3 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 transition-all duration-300"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.007,3H3.993C3.445,3,3,3.445,3,3.993v16.013C3,20.555,3.445,21,3.993,21h8.621v-6.971h-2.346v-2.717h2.346V9.31 c0-2.325,1.42-3.591,3.494-3.591c0.993,0,1.847,0.074,2.096,0.107v2.43l-1.438,0.001c-1.128,0-1.346,0.536-1.346,1.323v1.734h2.69 l-0.35,2.717h-2.34V21h4.587C20.555,21,21,20.555,21,20.007V3.993C21,3.445,20.555,3,20.007,3z" />
-                </svg>
-              </button>
-
-              {/* Twitter */}
-              <button
-                type="button"
-                className="w-full inline-flex justify-center py-3 px-4 border border-gray-200 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 transition-all duration-300"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953,4.57a10,10,0,0,1-2.825.775,4.958,4.958,0,0,0,2.163-2.723,10.054,10.054,0,0,1-3.127,1.184A4.92,4.92,0,0,0,11.78,8.28,13.98,13.98,0,0,1,1.64,3.162,4.822,4.822,0,0,0,3.2,9.713a4.9,4.9,0,0,1-2.23-.616v.061A4.923,4.923,0,0,0,4.88,14a5,5,0,0,1-2.212.085,4.937,4.937,0,0,0,4.604,3.417A9.868,9.868,0,0,1,0,19.78a13.941,13.941,0,0,0,7.548,2.209A13.862,13.862,0,0,0,21.5,8.057,10.055,10.055,0,0,0,23.953,4.57Z" />
-                </svg>
-              </button>
-            </div>
-          </div>
           
           {/* Register Link */}
           <div className="mt-8 text-center">
