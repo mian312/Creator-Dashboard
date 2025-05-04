@@ -54,7 +54,7 @@ const DailyRewardButton = ({ onClaim, disabled }) => {
         setClaimSuccess(false);
       }, 3000);
     } catch (error) {
-      console.error("Failed to claim daily reward:", error);
+      // console.error("Failed to claim daily reward:", error);
     } finally {
       setIsClaiming(false);
     }

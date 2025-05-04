@@ -19,7 +19,7 @@ export const fetchUserProfile = createAsyncThunk(
       const response = await api.get('/users/profile');
       return response.data;
     } catch (err) {
-      console.error('Profile fetch error:', err.response?.data || err.message);
+      // console.error('Profile fetch error:', err.response?.data || err.message);
       return rejectWithValue(err.response?.data || err.message);
     }
   }
@@ -110,10 +110,10 @@ export const fetchSavedPosts = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await api.get('/users/savedPosts');
-      console.log('Saved posts response:', response.data);
+      // console.log('Saved posts response:', response.data);
       return response.data;
     } catch (err) {
-      console.error('Error fetching saved posts:', err.response?.data || err.message);
+      // console.error('Error fetching saved posts:', err.response?.data || err.message);
       return rejectWithValue(err.response?.data || err.message);
     }
   }

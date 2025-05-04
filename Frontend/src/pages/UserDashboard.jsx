@@ -37,7 +37,7 @@ const UserDashboard = () => {
   useEffect(() => {
     // Fetch user profile to get updated coins
     dispatch(fetchUserProfile());
-    console.log(savedPosts)
+    // console.log(savedPosts)
     // Initial posts load
     const getPosts = async () => {
       setLoading(true);
@@ -46,7 +46,7 @@ const UserDashboard = () => {
         dispatch(setPosts(data));
         setHasMore(data.length > 0);
       } catch (error) {
-        console.error("Failed to fetch posts:", error);
+        // console.error("Failed to fetch posts:", error);
       } finally {
         setLoading(false);
       }
@@ -70,7 +70,7 @@ const UserDashboard = () => {
         setHasMore(false);
       }
     } catch (error) {
-      console.error("Failed to load more posts:", error);
+      // console.error("Failed to load more posts:", error);
     } finally {
       setLoading(false);
     }

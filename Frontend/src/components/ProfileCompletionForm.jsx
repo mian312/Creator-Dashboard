@@ -25,7 +25,7 @@ const ProfileCompletionForm = () => {
       await dispatch(fetchUserProfile());
     } catch (error) {
       setCompletionStatus('Failed to complete profile');
-      console.error('Profile update error:', error);
+      // console.error('Profile update error:', error);
     } finally {
       setSubmitting(false);
     }
