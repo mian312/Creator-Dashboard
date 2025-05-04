@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default ({ mode }) => {
   // Load environment variables based on the current mode
   const env = loadEnv(mode, process.cwd(), '');
+  console.log('Environment variables:', env);
 
   return defineConfig({
     plugins: [
@@ -16,7 +17,7 @@ export default ({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: "https://creator-dashboard-6bdp.onrender.com", // Ensure this is set in your .env files
+          target: env.VITE_API_URL, // Ensure this is set in your .env files
           changeOrigin: true,
           secure: false,
           rewrite: (path) => path.replace(/^\/api/, ''),
